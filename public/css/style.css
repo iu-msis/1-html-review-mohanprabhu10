@@ -1,0 +1,42 @@
+header{
+    background-color: black;
+    color: white;
+  }
+  
+  a{
+    color: gray;
+    font-weight: bold;
+  }
+  
+  footer{
+     border-color: black;
+    border-style: solid;
+    background-color: black;
+    color: white;
+    text-align:center;
+  }
+  h1{
+    margin: 0px;
+    padding-top: 15px;
+  }
+  .eventsList{
+  background-color: lightgray;
+  color : black;
+  list-style-type: none;
+  border-radius: 7px;
+  border-color: darkgrey;
+  font-size: large;
+  margin: 10px;
+  padding: 10px;
+  border-style: solid;
+  border-width: 0.5px;
+  }
+  
+  .borderedH3{
+    border-radius: 5px;
+    border-color: blue;
+    border-style: solid;
+    background-color: blue;
+    color: white;
+  }
+  
