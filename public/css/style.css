@@ -39,4 +39,24 @@ header{
     background-color: blue;
     color: white;
   }
+
+  footer
+  {
+    border-color: black;
+    border-style: solid;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align:center;
+  }
+
+  a:link 
+  {
+    text-decoration: none;
+  }
+
+  a:hover 
+  {
+    text-decoration: none;
+  }
   
