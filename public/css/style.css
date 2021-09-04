@@ -73,3 +73,10 @@
       font-size: large;
       background-color: gray;
   }
+
+  #paragraph
+  {
+      font-weight: 100;
+      color:red;
+      background-color: black;
+  }
