@@ -10,7 +10,7 @@ const app = { //const is faster, is not going to change
             "country":"USA",
             "birthday":"",
         },
-        "imgURL":"img/Batman.jpg"
+        "imgURL":"img/Batman.jpg" //default image URL
     }
     },
 
