@@ -6,17 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  
-    <title>I'm Batman</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <title>Welcome</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+
   </head>
   <body>
     <header>
       <h1>
         <a href="https://1000logos.net/wp-content/uploads/2021/04/Batman-Logo-500x291.png" target="_blank">
           <img src ="img/Batman-Logo.png" height = "100px">
-        </a> &nbsp; Batman
+        </a> &nbsp; People
     </h1>
     </header>
 
@@ -35,7 +39,7 @@
                 <a class="nav-link" href="books.html">Books</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="dsbatman.html">Data and Systems x Batman</a>
+                <a class="nav-link" href="dsbatman.html">Data and Systems</a>
               </li>
             </ul>
             <form class="d-flex">
@@ -44,11 +48,11 @@
             </form>
           </div>
         </nav>
-        <div class = "row">
+        <div id ="VueApp_InfoDisplay" class = "row">
           <div class = "col-lg-6">
-          <a href="https://ychef.files.bbci.co.uk/1600x900/p08nwml7.webp" target="_blank">
-            <img src ="img/Batman.jpg" class = "img-responsive" >
-          </a>
+          <a v-bind:href="imgURL" target="_blank">
+            <img v-bind:src ="imgURL">
+          </a> 
           </div>   
           <div class = "col-lg-6">
             <div class="card" style="width: 18rem;">
@@ -56,24 +60,29 @@
                 About Me
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">I'm Batman</li>
-                <li class="list-group-item">I'm from Gotham, USA.</li>
-                <li class="list-group-item">Born on April 17, 1978</li>
-                <li class="list-group-item">I'm <b>43</b> years old</li>
-                <li class="list-group-item"><a href="mailto:batman@batman.com">Email Me to Report a Crime</a> </li>
+
+                <li class="list-group-item">I'm {{randomPerson.firstName}} {{randomPerson.lastName}}</li>
+                <li class="list-group-item">I'm from {{randomPerson.country}}</li>
+                <li class="list-group-item">Born on {{prettyBirthday}}</li>
+                <li class="list-group-item">I'm {{randomPerson.age}} years old</li>
+                <li class="list-group-item"><a v-bind:href="'mailto:'+ randomPerson.email">Email Me to Report a Crime</a> </li>
+
+                <form v-on:submit.prevent="fetchUserData">
+                  <button type="submit">Refresh</button>
+                </form>
               </ul>
             </div>
           </div>       
         </div>
+      </div>
       </main>
-
-        <br> <br>
+        <hr>
         <footer>
           Image Source: 
-          <a href="https://1000logos.net/wp-content/uploads/2021/04/Batman-Logo-500x291.png">Batman Logo (1000logos.net)</a> |
-          <a href="https://ychef.files.bbci.co.uk/1600x900/p08nwml7.webp"> Batman Photo (BBC.co.uk)</a>
+          <a href="https://1000logos.net/wp-content/uploads/2021/04/Batman-Logo-500x291.png">Batman Logo (1000logos.net)</a>
         </footer>    
       </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
