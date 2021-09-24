@@ -67,12 +67,12 @@
                 <li class="list-group-item">Born on {{prettyBirthday}}</li>
                 <li class="list-group-item">I'm {{randomPerson.age}} years old</li>
                 <li class="list-group-item"><a v-bind:href="'mailto:'+ randomPerson.email">Email Me to Report a Crime</a> </li>
+
                 <!--Refresh button to refresh just the Vue App-->
-
-                <!-- <form v-on:submit.prevent="fetchUserData">
+                <!--Calls fetchUserData method to refresh just the Vue app instead of reloading the page-->
+                <form v-on:submit.prevent="fetchUserData">
                   <button type="submit">Refresh</button>
-                </form> -->
-
+                </form> 
               </ul>
             </div>
           </div>       
